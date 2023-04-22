@@ -10,20 +10,20 @@ service StockService {
 }
 
 enum SegmentType {
-    MINING = 0;
-    BANKING = 1;
-    FOOD = 2;
-    AGRICULTURE = 3;
-    ENERGY = 4;
-    OTHER = 5;
+    OTHER = 0;
+    MINING = 1;
+    BANKING = 2;
+    FOOD = 3;
+    AGRICULTURE = 4;
+    ENERGY = 5;
 }
 
 message Stock {
     string name = 1;
-    double currentPrice = 2;
+    double current_price = 2;
     optional string description = 3;
     optional SegmentType type = 4;
-    repeated double priceHistory = 5;
+    repeated double price_history = 5;
 }
 
 message StockRequest {
@@ -36,11 +36,11 @@ message StockResponse {
 }
 
 message FunctionResponse {
-    double totalPrice = 1;
+    double total_price = 1;
 }
 
 message FileRequest {
-    StockRequest stockItem = 1;
+    StockRequest stock_item = 1;
     string filename = 2;
 }
 

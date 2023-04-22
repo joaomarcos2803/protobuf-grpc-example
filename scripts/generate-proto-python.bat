@@ -1,1 +1,1 @@
-python -m grpc_tools.protoc -I../Proto --python_out=../Proto --grpc_python_out=../Proto ../Proto/stock.proto
+python -m grpc_tools.protoc -I../proto --python_out=../proto --grpc_python_out=../proto ../proto/stock.proto
